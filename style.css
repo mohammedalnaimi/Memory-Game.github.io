@@ -30,8 +30,8 @@ html {
   top: 0;
   background-color: rgba(3, 169, 244, 0.9);
   color: #fff;
-  padding-top: 360px;
-  font-size: 30px;
+  padding-top: 300px;
+  font-size: 28px;
   font-weight: bold;
   text-align: center;
   z-index: 2;
@@ -44,8 +44,8 @@ html {
   top: 0;
   background-color: rgba(3, 169, 244, 0.9);
   color: #fff;
-  padding-top: 360px;
-  font-size: 30px;
+  padding-top: 300px;
+  font-size: 28px;
   font-weight: bold;
   text-align: center;
   z-index: 2;
@@ -63,6 +63,12 @@ html {
   border-radius: 6px;
   cursor: pointer;
   z-index: 9999;
+}
+@media (max-width: 767px) {
+  .reload-btn {
+    font-size: 24px;
+    padding: 10px 20px;
+  }
 }
 .control-buttons span {
   position: absolute;
