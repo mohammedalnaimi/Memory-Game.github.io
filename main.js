@@ -88,7 +88,7 @@ function checkMatchedBlocks(firstBlock, secondBlock) {
     if (allmatchedBlock.length === 20) {
       let goodJobEL = document.createElement("div");
 
-      let button = document.createElement("button");
+      let button = document.createElement("span");
       button.className = "reload-btn";
 
       goodJobEL.classList.add("result");
@@ -147,11 +147,11 @@ function timeOut() {
   let counter = setInterval(() => {
     seconds--
     // document.querySelector(".time").innerHTML = seconds;
-    if (seconds == 0) {
+    if (seconds == 85) {
       clearInterval(counter);
       let timeOutEL = document.createElement("div");
 
-      let button = document.createElement("button");
+      let button = document.createElement("span");
       button.className = "reload-btn";
 
       timeOutEL.classList.add("time-out");
