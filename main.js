@@ -143,11 +143,11 @@ function shuffle(array) {
 }
 
 function timeOut() {
-  let seconds = Math.floor(((1000 * 80)) / 1000);
+  let seconds = Math.floor(((1000 * 90)) / 1000);
   let counter = setInterval(() => {
     seconds--
     // document.querySelector(".time").innerHTML = seconds;
-    if (seconds == 75) {
+    if (seconds == 0) {
       clearInterval(counter);
       let timeOutEL = document.createElement("div");
 
