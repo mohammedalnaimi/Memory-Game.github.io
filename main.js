@@ -146,7 +146,7 @@ function timeOut() {
   let seconds = Math.floor(((1000 * 80)) / 1000);
   let counter = setInterval(() => {
     seconds--
-    document.querySelector(".time").innerHTML = seconds;
+    // document.querySelector(".time").innerHTML = seconds;
     if (seconds == 0) {
       clearInterval(counter);
       let timeOutEL = document.createElement("div");
