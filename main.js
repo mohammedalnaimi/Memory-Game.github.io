@@ -134,11 +134,12 @@ function timeOut() {
       button.innerHTML = "Play Again";
       goodJobEL.appendChild(button);
       document.body.appendChild(goodJobEL);
+      // Play Win Audio
+      document.getElementById("win").play();
+      // Click To Play Again
       button.onclick = function () {
         window.location.reload();
       };
-      // Play Win Audio
-      document.getElementById("win").play();
     }
     // If Time Equel Zero
     if (seconds === 0) {
@@ -151,11 +152,12 @@ function timeOut() {
       button.innerHTML = "Play Again";
       timeOutEL.appendChild(button);
       document.body.appendChild(timeOutEL);
+      // Play Loss Audio
+      document.getElementById("loss").play();
+      // Click To Play Again
       button.onclick = function () {
         window.location.reload();
       };
-      // Play Loss Audio
-      document.getElementById("loss").play();
     }
   }, 1000);
 }
