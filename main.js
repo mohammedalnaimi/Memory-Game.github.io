@@ -110,29 +110,36 @@ function shuffle(array) {
   // Return Order Range
   return array;
 }
+
+
 // Time Out Function
 function timeOut() {
-  let seconds = Math.floor((1000 * 60) / 1000);
-  let counter = setInterval(() => {
+  let seconds = Math.floor((1000 * 70) / 1000);
+  let counterTwo = setInterval(() => {
     seconds--;
     // document.querySelector(".time").innerHTML = seconds;
     // Collect All Has-Match Cards
     allmatchedBlock = blocks.filter((matchedBlock) =>
-      matchedBlock.classList.contains("has-match")
+    matchedBlock.classList.contains("has-match")
     );
     // If Selected 20 True Blocks
     if (allmatchedBlock.length === 20) {
-      clearInterval(counter);
+      clearInterval(counterOne)
+      clearInterval(counterTwo)
       let goodJobEL = document.createElement("div");
       let button = document.createElement("span");
+      let timeSpent = document.createElement("span")
+      timeSpent.className = "spent-time"
       button.className = "reload-btn";
       goodJobEL.classList.add("result");
       goodJobEL.innerHTML =
-        "Good Job " +
-        document.querySelector(".name span").innerHTML +
-        "&#128516;";
+      "Good Job " +
+      document.querySelector(".name span").innerHTML +
+      "&#128516;";
       button.innerHTML = "Play Again";
+      timeSpent.innerHTML = `You spent ${count} seconds`
       goodJobEL.appendChild(button);
+      goodJobEL.appendChild(timeSpent)
       document.body.appendChild(goodJobEL);
       // Play Win Audio
       document.getElementById("win").play();
@@ -143,7 +150,8 @@ function timeOut() {
     }
     // If Time Equel Zero
     if (seconds === 0) {
-      clearInterval(counter);
+      clearInterval(counterOne)
+      clearInterval(counterTwo);
       let timeOutEL = document.createElement("div");
       let button = document.createElement("span");
       button.className = "reload-btn";
@@ -160,4 +168,10 @@ function timeOut() {
       };
     }
   }, 1000);
+  // Show Spent Time
+  let count = 0
+  let counterOne = setInterval (() => {
+    count++
+    console.log(count)
+  }, 1000)
 }
