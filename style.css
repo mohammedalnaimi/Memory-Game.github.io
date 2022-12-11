@@ -9,7 +9,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
-.container {
+.memory-game {
   max-width: 1200px;
   margin: auto;
 }
@@ -22,20 +22,7 @@ html {
   z-index: 9999;
   background-color: rgba(3, 169, 244, 0.9);
 }
-.result {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: rgba(3, 169, 244, 0.9);
-  color: #fff;
-  padding-top: 200px;
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  z-index: 10;
-}
+.result,
 .time-out {
   position: fixed;
   width: 100%;
@@ -45,32 +32,19 @@ html {
   background-color: rgba(3, 169, 244, 0.9);
   color: #fff;
   padding-top: 200px;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   z-index: 10;
 }
-.reload-btn {
-  position: absolute;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%, -50%);
-  background-color: #f44336;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 30px;
-  text-align: center;
-  border-radius: 6px;
-  cursor: pointer;
-  z-index: 9999;
-}
 @media (max-width: 767px) {
-  .reload-btn {
-    font-size: 24px;
-    padding: 10px 20px;
+  .result,
+  .time-out {
+    font-size: 28px;
   }
 }
-.control-buttons span {
+.control-buttons span,
+.reload-btn {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -85,7 +59,8 @@ html {
   z-index: 9999;
 }
 @media (max-width: 767px) {
-  .control-buttons span{
+  .control-buttons span,
+  .reload-btn  {
     font-size: 24px;
     padding: 10px 20px;
   }
@@ -116,7 +91,7 @@ html {
 .memory-game-blocks {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 @media (max-width: 767px) {
   .memory-game-blocks {
