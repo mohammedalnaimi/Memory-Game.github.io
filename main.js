@@ -112,7 +112,7 @@ function shuffle(array) {
 }
 // Time Out Function
 function timeOut() {
-  let seconds = Math.floor((1000 * 80) / 1000);
+  let seconds = Math.floor((1000 * 70) / 1000);
   let counter = setInterval(() => {
     seconds--;
     // document.querySelector(".time").innerHTML = seconds;
@@ -130,6 +130,8 @@ function timeOut() {
       button.onclick = function () {
         window.location.reload();
       };
+      // Play Loss Audio
+      document.getElementById("loss").play()
     }
     // Collect All Has-Match Cards
     allmatchedBlock = blocks.filter((matchedBlock) =>
@@ -152,6 +154,8 @@ function timeOut() {
       button.onclick = function () {
         window.location.reload();
       };
+      // Play Win Audio
+      document.getElementById("win").play()
     }
   }, 1000);
 }
