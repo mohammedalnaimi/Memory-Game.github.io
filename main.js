@@ -123,15 +123,15 @@ function timeOut() {
       let button = document.createElement("span");
       button.className = "reload-btn";
       timeOutEL.classList.add("time-out");
-      document.body.appendChild(timeOutEL);
-      document.body.appendChild(button);
       timeOutEL.innerHTML = "Time Out You Lost!&#128543;";
       button.innerHTML = "Play Again";
+      timeOutEL.appendChild(button);
+      document.body.appendChild(timeOutEL);
       button.onclick = function () {
         window.location.reload();
       };
       // Play Loss Audio
-      document.getElementById("loss").play()
+      document.getElementById("loss").play();
     }
     // Collect All Has-Match Cards
     allmatchedBlock = blocks.filter((matchedBlock) =>
@@ -144,18 +144,18 @@ function timeOut() {
       let button = document.createElement("span");
       button.className = "reload-btn";
       goodJobEL.classList.add("result");
-      document.body.appendChild(goodJobEL);
-      document.body.appendChild(button);
       goodJobEL.innerHTML =
         "Good Job " +
         document.querySelector(".name span").innerHTML +
         "&#128516;";
       button.innerHTML = "Play Again";
+      goodJobEL.appendChild(button);
+      document.body.appendChild(goodJobEL);
       button.onclick = function () {
         window.location.reload();
       };
       // Play Win Audio
-      document.getElementById("win").play()
+      document.getElementById("win").play();
     }
   }, 1000);
 }
