@@ -116,23 +116,6 @@ function timeOut() {
   let counter = setInterval(() => {
     seconds--;
     // document.querySelector(".time").innerHTML = seconds;
-    // If Time Equel Zero
-    if (seconds == 0) {
-      clearInterval(counter);
-      let timeOutEL = document.createElement("div");
-      let button = document.createElement("span");
-      button.className = "reload-btn";
-      timeOutEL.classList.add("time-out");
-      timeOutEL.innerHTML = "Time Out You Lost!&#128543;";
-      button.innerHTML = "Play Again";
-      timeOutEL.appendChild(button);
-      document.body.appendChild(timeOutEL);
-      button.onclick = function () {
-        window.location.reload();
-      };
-      // Play Loss Audio
-      document.getElementById("loss").play();
-    }
     // Collect All Has-Match Cards
     allmatchedBlock = blocks.filter((matchedBlock) =>
       matchedBlock.classList.contains("has-match")
@@ -156,6 +139,23 @@ function timeOut() {
       };
       // Play Win Audio
       document.getElementById("win").play();
+    }
+    // If Time Equel Zero
+    if (seconds === 0) {
+      clearInterval(counter);
+      let timeOutEL = document.createElement("div");
+      let button = document.createElement("span");
+      button.className = "reload-btn";
+      timeOutEL.classList.add("time-out");
+      timeOutEL.innerHTML = "Time Out You Lost!&#128543;";
+      button.innerHTML = "Play Again";
+      timeOutEL.appendChild(button);
+      document.body.appendChild(timeOutEL);
+      button.onclick = function () {
+        window.location.reload();
+      };
+      // Play Loss Audio
+      document.getElementById("loss").play();
     }
   }, 1000);
 }
