@@ -31,7 +31,7 @@ html {
   height: 100%;
   background-color: rgba(3, 169, 244, 0.9);
   color: #fff;
-  padding-top: 200px;
+  padding-top: 120px;
   font-size: 40px;
   font-weight: bold;
   text-align: center;
@@ -42,6 +42,14 @@ html {
   .time-out {
     font-size: 28px;
   }
+}
+.spent-time {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 24px;
 }
 .control-buttons span,
 .reload-btn {
