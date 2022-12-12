@@ -95,7 +95,7 @@ html {
 }
 @media (max-width: 767px) {
   .memory-game-blocks {
-    margin: 25px auto;
+    margin: 20px 0 25px;
   }
 }
 .memory-game-blocks.no-clicking {
