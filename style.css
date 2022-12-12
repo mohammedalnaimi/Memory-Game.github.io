@@ -31,19 +31,11 @@ html {
   height: 100%;
   background-color: rgba(3, 169, 244, 0.9);
   color: #fff;
-  padding-top: 120px;
+  padding-top: 200px;
   font-size: 40px;
   font-weight: bold;
   text-align: center;
   z-index: 9999;
-}
-.spent-time {
-  display: block;
-  text-align: center;
-  margin-top: 30px;
-  color: #fff;
-  font-weight: normal;
-  font-size: 22px;
 }
 @media (max-width: 767px) {
   .result,
@@ -103,7 +95,7 @@ html {
 }
 @media (max-width: 767px) {
   .memory-game-blocks {
-    margin: 25px -5px;
+    margin: 25px auto;
   }
 }
 .memory-game-blocks.no-clicking {
@@ -120,8 +112,8 @@ html {
 }
 @media (max-width: 767px) {
   .memory-game-blocks .game-block {
-    flex: 1 0 80px;
-    height: 85px;
+    flex: 1 0 70px;
+    height: 80px;
     margin: 0 5px 25px;
   }
 }
@@ -131,7 +123,7 @@ html {
 }
 @media (max-width: 767px) {
   .memory-game-blocks .game-block .front {
-    line-height: 80px;
+    line-height: 75px;
   }
 }
 .memory-game-blocks .game-block .front:before {
